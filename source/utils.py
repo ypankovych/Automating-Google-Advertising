@@ -1,9 +1,14 @@
+import configparser
 import subprocess
 import time
 
 from bs4 import BeautifulSoup
 
-from settings import alpha_path, alpha_time, target
+config = configparser.ConfigParser()
+config.read('config.ini')
+target = config.get('DOMAIN', 'target')
+alpha_time = config.getint('TIME', 'alpha_time')
+alpha_path = config.get('PATHWAYS', 'alpha_path')
 
 
 def detect_url(element):
