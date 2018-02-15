@@ -1,4 +1,4 @@
-# Запуск:
+# For start:
 
 #### Create virtualenv:
 
